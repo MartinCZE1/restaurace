@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+
+* {
+  user-select: none;
+}
+
+#start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#startButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#startButton button {
+  width: 150px;
+  height: 50px;
+  font-size: 24pt;
+  font-family: "Jost";
+}
+
+#start img {
+  width: 400px;
+  height: 400px;
+}
+
+#restaurant {
+  background-image: url(../img/pozadi.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
+  height: 1080px;
+}
