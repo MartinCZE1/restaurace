@@ -4,6 +4,8 @@
   user-select: none;
 }
 
+/*Začátek startu*/
+
 #start {
   display: flex;
   align-items: center;
@@ -28,6 +30,8 @@
   height: 400px;
 }
 
+/*Začátek restaurace*/
+
 #restaurant {
   background-image: url(../img/pozadi.jpg);
   background-repeat: no-repeat;
@@ -38,18 +42,16 @@
 
 #ingredients {
   width: 22%;
-  border: solid 2px #000;
   height: 780px;
 }
 
 #table {
   width: 53%;
-  border: solid 2px #000;
   height: 780px;
 }
 
 #order {
   width: 22%;
-  border: solid 2px #000;
   height: 780px;
 }
+
