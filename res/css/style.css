@@ -41,17 +41,16 @@
 }
 
 #ingredients {
-  width: 22%;
-  height: 780px;
+  width: 23%;
+  float: left;
 }
 
 #table {
   width: 53%;
-  height: 780px;
+  float: left;
 }
 
 #order {
   width: 22%;
-  height: 780px;
+  float: left;
 }
-
