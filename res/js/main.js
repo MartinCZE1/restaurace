@@ -1,14 +1,24 @@
 const startButton = document.getElementById("startButton");
 const story = document.getElementById("story");
+const storyEnd = document.getElementById("storyEnd");
 const orderButton = document.getElementById("orderButton");
+const ingredients = document.getElementById("ingredients");
+
+
 
 let orderNumber = 0;
+var dragItem = null;
 
 startButton.onclick = () => {
-  //Přidat zobrazování textu json
   start.style.display = "none";
   startButton.style.display = "none";
-  //Toto přepsat do jiné fce
+  story.style.display = "block";
+  storyEnd.style.display = "flex";
+};
+
+storyEnd.onclick = () => {
+  story.style.display = "none";
+  storyEnd.style.display = "none";
   restaurant.style.display = "block";
   ingredients.style.display = "inline-block";
   table.style.display = "inline-block";
@@ -22,13 +32,13 @@ window.onload = async () => {
     console.log(data);
     data.story.forEach((line) => {
       story.innerHTML += `
-      ${line.one}
-      <p>${line.two}</p>
-      <p>${line.three}</p>
-      <p>${line.four}</p>
-      <p>${line.five}</p>
-      <p>${line.six}</p>
-      `;
+         ${line.one}
+         ${line.two}
+         ${line.three}
+         ${line.four}
+         ${line.five}
+         ${line.six}
+        `;
     });
   } catch (err) {
     console.log(err);
@@ -44,12 +54,6 @@ function orderList() {
     console.log("rand 2");
   } else if (orderNumber == 3) {
     console.log("rand 3");
-  } else if (orderNumber == 4) {
-    console.log("rand 4");
-  } else if (orderNumber == 5) {
-    console.log("rand 5");
-  } else {
-    console.log("nasjkdha");
   }
 }
 

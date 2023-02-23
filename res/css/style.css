@@ -2,6 +2,13 @@
 
 * {
   user-select: none;
+  font-family: "Jost";
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 24pt;
 }
 
 /*Začátek startu*/
@@ -18,16 +25,27 @@
   justify-content: center;
 }
 
-#startButton button {
-  width: 150px;
-  height: 50px;
-  font-size: 24pt;
-  font-family: "Jost";
-}
-
 #start img {
   width: 400px;
   height: 400px;
+}
+
+#story {
+  display: none;
+  width: 50%;
+  border: 2px #000 solid;
+  background-color: #c3c3c3;
+  padding: 2%;
+  border-radius: 15px;
+  margin: auto;
+  font-size: 24pt;
+}
+
+#storyEnd {
+  display: none;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Začátek restaurace*/
@@ -53,4 +71,8 @@
 #order {
   width: 22%;
   float: left;
+}
+
+#orderButton {
+  width: auto;
 }
