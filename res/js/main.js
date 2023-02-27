@@ -1,13 +1,31 @@
 const startButton = document.getElementById("startButton");
 const story = document.getElementById("story");
 const storyEnd = document.getElementById("storyEnd");
+
 const orderButton = document.getElementById("orderButton");
-const ingredients = document.getElementById("ingredients");
+const orderHam = document.getElementById("orderHam");
+const orderCheese = document.getElementById("orderCheese");
+const orderSalam = document.getElementById("orderSalam");
 
+const salam = document.getElementById("salam");
+const cheese = document.getElementById("cheese");
+const ham = document.getElementById("ham");
+const sauce = document.getElementById("sauce");
+const dough = document.getElementById("dough");
 
+const salamCounter = document.getElementById("salamCounter");
+const cheeseCounter = document.getElementById("cheeseCounter");
+const hamCounter = document.getElementById("hamCounter");
+const sauceCounter = document.getElementById("sauceCounter");
+const doughCounter = document.getElementById("doughCounter");
 
 let orderNumber = 0;
-var dragItem = null;
+
+let salamCount = 0;
+let cheeseCount = 0;
+let hamCount = 0;
+let sauceCount = 0;
+let doughCount = 0;
 
 startButton.onclick = () => {
   start.style.display = "none";
@@ -20,9 +38,6 @@ storyEnd.onclick = () => {
   story.style.display = "none";
   storyEnd.style.display = "none";
   restaurant.style.display = "block";
-  ingredients.style.display = "inline-block";
-  table.style.display = "inline-block";
-  order.style.display = "inline-block";
 };
 
 window.onload = async () => {
@@ -45,16 +60,61 @@ window.onload = async () => {
   }
 };
 
-//Zde se vloží sestavené menu místo rand 1, 2, 3, 4, 5
 function orderList() {
-  orderNumber = Math.floor(Math.random() * 5) + 1;
+  orderNumber = Math.floor(Math.random() * 3) + 1;
   if (orderNumber == 1) {
-    console.log("rand 1");
+    ham.addEventListener("click", hamClick);
+    sauce.addEventListener("click", sauceClick);
+    dough.addEventListener("click", doughClick);
+    cheese.removeEventListener("click", cheeseClick);
+    salam.removeEventListener("click", salamClick);
+    orderHam.style.display = "block";
+    orderCheese.style.display = "none";
+    orderSalam.style.display = "none";
   } else if (orderNumber == 2) {
-    console.log("rand 2");
+    sauce.addEventListener("click", sauceClick);
+    dough.addEventListener("click", doughClick);
+    cheese.addEventListener("click", cheeseClick);
+    ham.removeEventListener("click", hamClick);
+    salam.removeEventListener("click", salamClick);
+    orderCheese.style.display = "block";
+    orderHam.style.display = "none";
+    orderSalam.style.display = "none";
   } else if (orderNumber == 3) {
-    console.log("rand 3");
+    sauce.addEventListener("click", sauceClick);
+    dough.addEventListener("click", doughClick);
+    salam.addEventListener("click", salamClick);
+    cheese.removeEventListener("click", cheeseClick);
+    ham.removeEventListener("click", hamClick);
+    orderSalam.style.display = "block";
+    orderHam.style.display = "none";
+    orderCheese.style.display = "none";
   }
+}
+
+function salamClick() {
+  salamCount++;
+  salamCounter.innerHTML = `${salamCount}`;
+}
+
+function cheeseClick() {
+  cheeseCount++;
+  cheeseCounter.innerHTML = `${cheeseCount}`;
+}
+
+function hamClick() {
+  hamCount++;
+  hamCounter.innerHTML = `${hamCount}`;
+}
+
+function sauceClick() {
+  sauceCount++;
+  sauceCounter.innerHTML = `${sauceCount}`;
+}
+
+function doughClick() {
+  doughCount++;
+  doughCounter.innerHTML = `${doughCount}`;
 }
 
 orderButton.onclick = () => {
