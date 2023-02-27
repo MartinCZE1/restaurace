@@ -71,6 +71,7 @@ function orderList() {
     orderHam.style.display = "block";
     orderCheese.style.display = "none";
     orderSalam.style.display = "none";
+    tableInfo.style.marginTop = "-338px";
   } else if (orderNumber == 2) {
     sauce.addEventListener("click", sauceClick);
     dough.addEventListener("click", doughClick);
@@ -80,6 +81,7 @@ function orderList() {
     orderCheese.style.display = "block";
     orderHam.style.display = "none";
     orderSalam.style.display = "none";
+    tableInfo.style.marginTop = "-338px";
   } else if (orderNumber == 3) {
     sauce.addEventListener("click", sauceClick);
     dough.addEventListener("click", doughClick);
@@ -89,8 +91,13 @@ function orderList() {
     orderSalam.style.display = "block";
     orderHam.style.display = "none";
     orderCheese.style.display = "none";
+    tableInfo.style.marginTop = "-338px";
   }
 }
+
+orderButton.onclick = () => {
+  orderList();
+};
 
 function salamClick() {
   salamCount++;
@@ -116,7 +123,3 @@ function doughClick() {
   doughCount++;
   doughCounter.innerHTML = `${doughCount}`;
 }
-
-orderButton.onclick = () => {
-  orderList();
-};
