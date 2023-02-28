@@ -14,11 +14,6 @@
     <title>the Good Pizza</title>
   </head>
   <body>
-    <!--
-       TODO
-    Pečení - button, pozadí, timer (interval)
-    -->
-
     <div id="celek">
       <div id="start">
         <img
@@ -40,6 +35,14 @@
 
       <div id="restaurant">
         <div id="table">
+          <div id="pineapple">
+            <img src="./res/img/pineapple.jpg" alt="Ananas" draggable="false" />
+            <p id="pineappleCounter">0</p>
+          </div>
+          <div id="mushroom">
+            <img src="./res/img/mushroom.jpg" alt="Žampion" draggable="false" />
+            <p id="mushroomCounter">0</p>
+          </div>
           <div id="salam">
             <img src="./res/img/salam.jpg" alt="Salám" draggable="false" />
             <p id="salamCounter">0</p>
@@ -64,18 +67,48 @@
         </div>
 
         <div id="order">
-          <img src="./res/img/Objednávka šunková.jpg" alt="Šunková" id="orderHam" />
-          <img src="./res/img/Objednávka sýrová.jpg" alt="Sýrová" id="orderCheese" />
-          <img src="./res/img/Objednávka salámová.jpg" alt="Salámová" id="orderSalam"/>
-          <button id="orderButton">Další objednávka</button>
+          <img
+            src="./res/img/Objednávka šunková.jpg"
+            alt="Šunková"
+            id="orderHam"
+          />
+          <img
+            src="./res/img/Objednávka sýrová.jpg"
+            alt="Sýrová"
+            id="orderCheese"
+          />
+          <img
+            src="./res/img/Objednávka salámová.jpg"
+            alt="Salámová"
+            id="orderSalam"
+            draggable="false"
+          />
+          <img
+            src="./res/img/Objednávka houbová.jpg"
+            alt="Houbová"
+            id="orderMushroom"
+            draggable="false"
+          />
+          <img
+            src="./res/img/Objednávka ananasová.jpg"
+            alt="Ananasová"
+            id="orderPineapple"
+            draggable="false"
+          />
+          <button id="orderButton">Přijmout objednávku</button>
         </div>
         <div id="tableInfo">
+          <button id="cookButton">Upéct</button>
           <p>
             Teď musíš podle objednávky zvolit vhodné ingredience. Pamatuj, že
             míň je víc, tak můžeš zvolit libovolný počet dané ingredience, ale
             pokud na nějakou zapomeneš, zákazník určtitě nebude nadšen.
           </p>
         </div>
+      </div>
+      <div id="furnace">
+        <p id="cookCounter">Doba pečení: 15</p>
+        <button id="sell">Vytáhnout z pece a prodat</button>
       </div>
     </div>
 
