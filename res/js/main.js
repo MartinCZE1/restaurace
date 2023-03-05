@@ -209,7 +209,7 @@ function cookClick() {
     cookCounter.innerHTML = `Doba pečení: ${cookCount}`;
     if (cookCount == 0) {
       clearInterval(cookInterval);
-      sell.style.display = "block"; 
+      sell.style.display = "block";
     }
   }, 1000);
 }
@@ -221,6 +221,22 @@ sell.onclick = () => {
   orderHam.style.display = "none";
   orderCheese.style.display = "none";
   orderSalam.style.display = "none";
+  orderMushroom.style.display = "none"
+  orderPineapple.style.display = "none"
   tableInfo.style.marginTop = "200px";
   sell.style.display = "none";
+  pineappleCount = 0;
+  pineappleCounter.innerHTML = `${pineappleCount}`;
+  mushroomCount = 0;
+  mushroomCounter.innerHTML = `${mushroomCount}`;
+  salamCount = 0;
+  salamCounter.innerHTML = `${salamCount}`;
+  cheeseCount = 0;
+  cheeseCounter.innerHTML = `${cheeseCount}`;
+  hamCount = 0;
+  hamCounter.innerHTML = `${hamCount}`;
+  sauceCount = 0;
+  sauceCounter.innerHTML = `${sauceCount}`;
+  doughCount = 0;
+  doughCounter.innerHTML = `${doughCount}`;
 };
