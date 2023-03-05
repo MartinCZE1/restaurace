@@ -1,4 +1,6 @@
 # restaurace
-Hra je nyní ve stádiu tvoření.
+Doporučuji hrát v režimu celé obrazovky. 
+
+Hra pravděpodobně neodpovídá zadání, ale fakt jsem se snažil :/
 
 [Hrát](https://martincze1.github.io/restaurace/)
